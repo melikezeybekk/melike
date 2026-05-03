@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Wild Animals Labyrinth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Start Screen -->
+    <div id="start-screen">
+        <h1>Wild Animals Labyrinth</h1>
+        <div class="character-selection">
+            <div class="char-box" data-char="1">
+                <img src="gorseller/karakter 1/b1.png" alt="Character 1">
+                <h3>Character 1</h3>
+            </div>
+            <div class="char-box" data-char="2">
+                <img src="gorseller/karakter 2/g1.png" alt="Character 2">
+                <h3>Character 2</h3>
+            </div>
+        </div>
+        <button id="start-btn" disabled>Start Game</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" style="display: none;">
+        <div class="game-header">
+            <div id="lives-display">❤️❤️❤️❤️❤️</div>
+            <h2>Find the Category for:</h2>
+            <div id="animal-display">ANIMAL NAME</div>
+        </div>
+        
+        <div id="maze-wrapper">
+            <div id="maze-container">
+                <!-- Grid dynamically generated -->
+                <div id="character"></div>
+                <div id="enemy"></div>
+            </div>
+            <!-- Labels -->
+            <div class="corner-label top-left">BIRD</div>
+            <div class="corner-label top-right">INSECT</div>
+            <div class="corner-label bottom-left">MAMMAL</div>
+            <div class="corner-label bottom-right">REPTILE</div>
+        </div>
+
+        <div class="mobile-controls">
+            <button id="btn-up" class="dpad-btn">▲</button>
+            <div class="dpad-row">
+                <button id="btn-left" class="dpad-btn">◀</button>
+                <button id="btn-down" class="dpad-btn">▼</button>
+                <button id="btn-right" class="dpad-btn">▶</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup -->
+    <div id="popup-overlay" class="hidden">
+        <div id="popup-box">
+            <h2 id="popup-msg">Well done! 🎉</h2>
+            <button id="popup-btn">Continue</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
